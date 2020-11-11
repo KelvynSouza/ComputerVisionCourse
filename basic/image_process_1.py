@@ -5,12 +5,13 @@ from matplotlib.pyplot import ioff
 
 
 def process_image(local_image):
-
     # Load image
     image = cv2.imread(local_image)
+
     show_info(image)
 
     image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+
     show_info(image)
 
     # Display result image
@@ -18,6 +19,7 @@ def process_image(local_image):
 
     # cut a image
     image_cropped = image[100:500, 100:500]
+
     cv2.imshow('image 2', image_cropped)
 
     cv2.waitKey(0)
@@ -37,3 +39,7 @@ def show_info(image):
     plt.plot(image[50, :])
     plt.show()
 
+
+if __name__ == '__main__':
+    path_image = '../images/dolphin.jpg'
+    process_image(path_image)
