@@ -1,4 +1,4 @@
-from basic.image_process_1 import process_image
+from basic.image_process_2 import process_image
 
 local_image = './images/dolphin.jpg'
 

@@ -9,13 +9,14 @@ def process_image(local_image):
     image = cv2.imread(local_image)
 
     show_info(image)
-
+    # Change image to GrayScale
     grey_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
     show_info(grey_image)
 
     # Display result image
-    cv2.imshow('image_grey', grey_image)
+    cv2.imshow('image_grey', grey_image)    
+
     # cut a image
     image_cropped = grey_image[100:500, 100:500]
 

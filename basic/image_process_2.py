@@ -70,8 +70,8 @@ def add_noise():
     noise = np.random.randn(image.shape[0],image.shape[1],image.shape[2]) * sigma     
     result_image = cv2.convertScaleAbs(image+noise)
     
-    cv2.imshow('image_normal', image)
-    cv2.imshow('image_noise', result_image)
+    show_info(image)
+    show_info(result_image)
     
 
 def show_info(image, isgray=False):
