@@ -1,6 +1,10 @@
+import sys
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+
+sys.path.insert(0, '../util')
+
 from helper import show_info
 
 def noise_sample():
@@ -33,7 +37,7 @@ def add_saltpepper_noise(image):
     out[tuple(coords)] = 0
     return out
 
-path_image_1 = '../images/moon_image.png'
+path_image_1 = '../../images/moon_image.png'
 
 noise_sample()
 

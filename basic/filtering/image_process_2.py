@@ -1,6 +1,11 @@
+import sys
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+
+sys.path.insert(0, '../util')
+
+from helper import show_info
 
 def sum_images():
     # Load image
@@ -73,26 +78,13 @@ def add_noise():
     show_info(image)
     show_info(result_image)
     
-
-def show_info(image, isgray=False):
-    print('-----------------------------------------------------')    
-    print('shape:', image.shape, 'and', 'size:', image.size)    
-    print(image.dtype)
-    
-    if isgray:
-        plt.imshow(image, cmap='gray')        
-    else:
-        plt.imshow(image[:,:,::-1])
-         
-    plt.show()    
-    
           
 def showable_float_image(image):
     result = cv2.convertScaleAbs(image)
     return result
     
-path_image_1 = '../images/In_Game_Image_2.jpg'
-path_image_2 = '../images/dolphin.jpg'
+path_image_1 = '../../images/In_Game_Image_2.jpg'
+path_image_2 = '../../images/dolphin.jpg'
 
 add_noise()
 

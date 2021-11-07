@@ -42,5 +42,5 @@ def show_info(image):
 
 
 if __name__ == '__main__':
-    path_image = '../images/In_Game_Image_2.jpg'
+    path_image = '../../images/In_Game_Image_2.jpg'
     process_image(path_image)
