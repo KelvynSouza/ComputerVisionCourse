@@ -1,12 +1,9 @@
 import sys
 import cv2
-import os
 import numpy as np
 from matplotlib import pyplot as plt
 
 sys.path.insert(0, '../util')
-
-print('cwd is %s' %(os.getcwd()))
 
 from helper import *
 
