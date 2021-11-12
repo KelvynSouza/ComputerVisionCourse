@@ -48,6 +48,7 @@ def better_gradient_image():
 
     show_info(sobel_8u)
 
+
 path_image_1 = '../../images/gradiant_octagon.png'
 
 better_gradient_image()
